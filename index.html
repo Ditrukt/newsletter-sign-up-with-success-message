@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <script src="script.js" defer></script>
+  <main>
+    <div class="card">
+      <div class="card-content">
+        <h1>Stay updated!</h1>
+        <p class="contex">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="list">
+          <li>
+            <img src="images\icon-list.svg" alt="icon">
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li>
+            <img src="images\icon-list.svg" alt="icon">
+            <p>Measuring to ensure updates are a success</p>
+          </li>
+          <li>
+            <img src="images\icon-list.svg" alt="icon">
+            <p>And much more!</p>
+          </li>
+        </ul>
+        <div class="email-info">
+          <p class="email">Email adress</p>
+          <err>field is empty</err>
+        </div>
+        <input type="text" placeholder="email@company.com">
+        <br>
+        <button type="button" id = "subscribe">Subscribe to monthly newsletter</button>
+      </div>
+      <div class="card-image">
+        <img src="images\illustration-sign-up-desktop.svg" alt="image" class="desktop">
+        <img src="images\illustration-sign-up-mobile.svg" alt="image" class="mobile">
+      </div>
+    </div>
+  </main>
+  <div class="success" style="display: none;">
+    <div class="card">
+      <div class="img-container">
+        <img src="images\icon-list.svg" alt="icon">
+      </div>  
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <a id="email"></a>. Please open it and click the button inside to confirm your subscription.</p>
+      <button type="button" id = "dismiss">Dismiss message</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+:root{
+--Tomato: hsl(4, 100%, 67%);
+--Tomato2: hsl(0, 0%, 0%);
+
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+
+
+--button-height: 60px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    transition: .5s;
+}
+body{
+    overflow-x: hidden;
+    background-color: var(--Charcoal-Grey);
+    height: 100dvh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 95dvh 5dvh;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+}
+.card{
+    min-width: 930px;
+    background-color: white;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0rem 2rem 3rem 0rem hsla(0, 0%, 0%, 0.5);
+}
+.card-content{
+    flex-basis: 50%;
+    text-align: left;
+    padding:2rem 1rem 2rem 3rem;
+}
+.card-content h1{
+    font-size: 4rem;
+}
+.card-content .contex{
+    color: var(--Dark-Slate-Grey);
+    margin: 2rem 0;
+}
+.list{
+    list-style-type: none;
+    margin-bottom: 1.2rem;
+}
+.list li{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+.list li img{
+    margin-top: 0.5rem;
+}
+.list li p{
+    margin: 0.5rem 0 0.5rem 1rem;
+}
+.email-info{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.card-content .email{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.email-error{
+    color:red
+}
+.card-content err{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: red;
+    display: none;
+}
+.card-content .email-info .error{
+    display: block;
+}
+.card-content input{
+    border: solid var(--Grey);
+    width: 100%;
+    height: var(--button-height);
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 2rem;
+    padding-left: 1.2rem;
+    font-size: 1.2rem;
+}
+ button{
+    color: white;
+    font-size: 1.2rem;
+    background-color: var(--Dark-Slate-Grey);
+    width: 100%;
+    height: var(--button-height);
+    border-width: 0;
+    border-radius: 10px;
+    border-spacing: 0;
+}
+button:hover{
+    background: linear-gradient(204deg,
+                            hsl(15 100% 61%),
+                            hsl(346 100% 66%));
+    box-shadow: 0 1rem 2rem color-mix(in srgb,
+                            hsl(4 100% 67%) 50%,
+                            white);
+}
+button:active{
+    scale: 1.06;
+}
+
+.card-image{
+    flex-basis: 40%;
+    width: 100%;
+    padding: 2rem;
+}
+.mobile{
+    width: 100%;
+    border-radius: 2rem;
+    display: none;
+}
+
+.alligment{
+    font-size: 11px;
+    text-align: center;
+}
+.attribution{
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.success {
+    max-width: 450px;
+}
+.success .card{
+    min-width: auto;
+    flex-direction: column;
+    padding: 2.5rem;
+}
+.success .img-container{
+    width: 100%;
+    float: left;
+}
+.success img{
+    width: 3rem;
+}
+.success h1{
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+.success p{
+    margin: 0 0 3rem;
+}
+.success a{
+    font-weight: 700;
+}
+@media (max-height: 700px){
+    body{
+        align-items: start;
+    }
+    .body-success{
+        min-width: fit-content;
+        min-height: min-content;
+        align-items: center;
+    }
+    .attribution{
+        display: none;
+    }
+}
+@media (max-width: 930px){
+
+    main .card{
+        min-width: fit-content;
+        min-height: fit-content;
+        flex-direction: column-reverse;
+        box-shadow: none;
+        justify-content: flex-end;
+    }
+    main .card-image{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .card-content{
+        padding: 2rem 2rem;
+    }
+    .card-content h1{
+        font-size: 3rem;
+    }
+    .attribution{
+        display: none;
+    }
+        
+    @media (max-width: 600px) {
+        main .card, .mobile{
+            border-radius: 0;
+        }
+        .card-content h1{
+            font-size: calc(2rem + 2vw);
+        }
+    }
+    
+}
