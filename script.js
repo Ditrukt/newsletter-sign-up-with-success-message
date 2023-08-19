@@ -14,7 +14,7 @@ document.getElementById("subscribe")
             "Oops, form is empty" : "We need valid email";
         email.focus();
     }
-    email.classList.toggle('email-err', !isValid);
+    email.classList.toggle('email-error', !isValid);
     err.classList.toggle('error', !isValid);
     document.body.classList.toggle('body-success', isValid);
 });
